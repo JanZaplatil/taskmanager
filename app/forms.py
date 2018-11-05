@@ -5,9 +5,11 @@ from datetime import datetime, date
 
 
 class LoginForm(FlaskForm):
-    username = StringField('Task', validators=[DataRequired()])
+    task = StringField('Task', validators=[DataRequired()])
     description = StringField('Task Description', validators=[DataRequired()])
     start = DateField('Start', default=datetime.today)
     password = PasswordField('Password', validators=[DataRequired()])
     remember_me = BooleanField('Rememeber Me')
-    submit = SubmitField('Sing In')
+    submit = SubmitField('Submit Task')
+
+

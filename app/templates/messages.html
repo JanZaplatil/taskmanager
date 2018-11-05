@@ -3,6 +3,7 @@
 {% block content %}
 
 
+
        <div class="container">
         <h1>Displayed tasks:</h1>
 
@@ -18,3 +19,14 @@
         {% endwith %}
         {% endblock %}
        </div>
+
+        {% for task in tasks %}
+        {% if tasks %}
+        <ul class="list-group">
+            {% for task in tasks %}
+            <li class="list-group-item">{{ task }}</li>
+            {% endfor %}
+        </ul>
+
+
+
